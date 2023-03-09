@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
 </head>
+
 <body>
     <h1>Calculadora</h1>
     <br>
@@ -15,33 +17,94 @@
     <input id="numeroB"> Número B </input>
     <br>
     <br>
-    <button id="suma" onclick="suma()"> SUMA (+)</button>
-    <h1>Resultado: </h1><input id="resultadoSuma"></input>
+    <button id="suma" onclick="suma()"> SUMAR (+)</button>
+    <button id="resta" onclick="resta()"> RESTAR (-)</button>
+    <button id="multiplicar" onclick="multiplicar()"> MULTIPLICAR (*)</button>
+    <button id="dividir" onclick="dividir()"> DIVIDIR (/)</button>
+    <h1>Resultado: </h1><input id="resultado"></input>
     <script>
-        
-        function suma(){
+
+
+        function suma() {
             console.log("iniciando suma")
 
-            const valorA = Number(document.getElementById("numeroA").value);
-            const valorB = Number(document.getElementById("numeroB").value);
-            let campoResultado = document.getElementById("resultadoSuma");
+            let valorA = Number(document.getElementById("numeroA").value);
+            let valorB = Number(document.getElementById("numeroB").value);
+            let campoResultado = document.getElementById("resultado");
 
-            if(!valorA || !valorB){
+
+            if (!valorA || !valorB) {
                 campoResultado.value = 'Faltan datos ->';
             }
 
-            if(valorA && valorB){
+            if (valorA && valorB) {
                 console.log('procesando resultado');
                 console.log('valor A ->', valorA);
                 console.log('valor B ->', valorB);
                 campoResultado.value = valorA + valorB;
             }
+        }
 
-            // const resultado = (valorA) + (valorB);
+        function resta() {
+            console.log("iniciando resta")
 
-            // console.log('resultado =>', resultado);
+            let valorA = Number(document.getElementById("numeroA").value);
+            let valorB = Number(document.getElementById("numeroB").value);
+            let campoResultado = document.getElementById("resultado");
 
+
+            if (!valorA || !valorB) {
+                campoResultado.value = 'Faltan datos ->';
+            }
+
+            if (valorA && valorB) {
+                console.log('procesando resultado');
+                console.log('valor A ->', valorA);
+                console.log('valor B ->', valorB);
+                campoResultado.value = valorA - valorB;
+            }
+        }
+
+        function multiplicar() {
+            console.log("iniciando multiplicacion")
+
+            let valorA = Number(document.getElementById("numeroA").value);
+            let valorB = Number(document.getElementById("numeroB").value);
+            let campoResultado = document.getElementById("resultado");
+
+
+            if (!valorA || !valorB) {
+                campoResultado.value = 'Faltan datos ->';
+            }
+
+            if (valorA && valorB) {
+                console.log('procesando resultado');
+                console.log('valor A ->', valorA);
+                console.log('valor B ->', valorB);
+                campoResultado.value = valorA * valorB;
+            }
+        }
+
+        function dividir() {
+            console.log("iniciando division")
+
+            let valorA = Number(document.getElementById("numeroA").value);
+            let valorB = Number(document.getElementById("numeroB").value);
+            let campoResultado = document.getElementById("resultado");
+
+
+            if (!valorA || !valorB) {
+                campoResultado.value = 'Faltan datos ->';
+            }
+
+            if (valorA && valorB) {
+                console.log('procesando resultado');
+                console.log('valor A ->', valorA);
+                console.log('valor B ->', valorB);
+                campoResultado.value = valorA / valorB;
+            }
         }
     </script>
 </body>
+
 </html>
