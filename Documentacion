@@ -2,3 +2,9 @@
 <br>salto de linea
 <input>caja para ingresar datos
 <button>boton para ejecutar
+
+GIT 
+git init -> iniciar un nuevo repositorios en un directorio
+git add -> agregar archivos nuevo para el seguimiento en git y agregar a archivos existentes
+git commit -> pérmite poner en forma oficial el nuevo archivo o modificacion dentro del repositorio
+git push -> subir los cambios a la nube 
