@@ -11,100 +11,28 @@
 <body>
     <h1>Calculadora</h1>
     <br>
-    <input id="numeroA"> Número A </input>
-    <br>
-    <br>
-    <input id="numeroB"> Número B </input>
-    <br>
-    <br>
-    <button id="suma" onclick="suma()"> SUMAR (+)</button>
-    <button id="resta" onclick="resta()"> RESTAR (-)</button>
-    <button id="multiplicar" onclick="multiplicar()"> MULTIPLICAR (*)</button>
-    <button id="dividir" onclick="dividir()"> DIVIDIR (/)</button>
-    <h1>Resultado: </h1><input id="resultado"></input>
-    <script>
 
+    <form id="obtenerDatos" method="post">
 
-        function suma() {
-            console.log("iniciando suma")
+        <label>Número 1: </label>
+        <input type="number" id="valor1" autofocus placeholder="Escribe un número"><br><br>
 
-            let valorA = Number(document.getElementById("numeroA").value);
-            let valorB = Number(document.getElementById("numeroB").value);
-            let campoResultado = document.getElementById("resultado");
+        <label>Número 2: </label>
+        <input type="number" id="valor2" placeholder="Escribe un número"><br><br>
 
+        <button onclick="limpiar()">Limpiar celdas</button><br><br>
 
-            if (!valorA || !valorB) {
-                campoResultado.value = 'Faltan datos ->';
-            }
+        <button type="button" onclick="suma()">SUMAR (+)</button>
+        <button type="button" onclick="resta()"> RESTAR (-)</button>
+        <button type="button" onclick="multiplicar()"> MULTIPLICAR (*)</button>
+        <button type="button" onclick="dividir()"> DIVIDIR (/)</button>
 
-            if (valorA && valorB) {
-                console.log('procesando resultado');
-                console.log('valor A ->', valorA);
-                console.log('valor B ->', valorB);
-                campoResultado.value = valorA + valorB;
-            }
-        }
+        <p>El resultado es: <span id="resultado"></span></p>
 
-        function resta() {
-            console.log("iniciando resta")
+    </form>
 
-            let valorA = Number(document.getElementById("numeroA").value);
-            let valorB = Number(document.getElementById("numeroB").value);
-            let campoResultado = document.getElementById("resultado");
+    <script src="operaciones.js"></script>
 
-
-            if (!valorA || !valorB) {
-                campoResultado.value = 'Faltan datos ->';
-            }
-
-            if (valorA && valorB) {
-                console.log('procesando resultado');
-                console.log('valor A ->', valorA);
-                console.log('valor B ->', valorB);
-                campoResultado.value = valorA - valorB;
-            }
-        }
-
-        function multiplicar() {
-            console.log("iniciando multiplicacion")
-
-            let valorA = Number(document.getElementById("numeroA").value);
-            let valorB = Number(document.getElementById("numeroB").value);
-            let campoResultado = document.getElementById("resultado");
-
-
-            if (!valorA || !valorB) {
-                campoResultado.value = 'Faltan datos ->';
-            }
-
-            if (valorA && valorB) {
-                console.log('procesando resultado');
-                console.log('valor A ->', valorA);
-                console.log('valor B ->', valorB);
-                campoResultado.value = valorA * valorB;
-            }
-        }
-
-        function dividir() {
-            console.log("iniciando division")
-
-            let valorA = Number(document.getElementById("numeroA").value);
-            let valorB = Number(document.getElementById("numeroB").value);
-            let campoResultado = document.getElementById("resultado");
-
-
-            if (!valorA || !valorB) {
-                campoResultado.value = 'Faltan datos ->';
-            }
-
-            if (valorA && valorB) {
-                console.log('procesando resultado');
-                console.log('valor A ->', valorA);
-                console.log('valor B ->', valorB);
-                campoResultado.value = valorA / valorB;
-            }
-        }
-    </script>
 </body>
 
 </html>
