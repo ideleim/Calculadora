@@ -1,7 +1,3 @@
-function limpiar() {
-    document.getElementById('obtenerDatos').reset();
-}
-
 function suma() {
     console.log("iniciando suma")
 

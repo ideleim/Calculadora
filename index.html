@@ -12,26 +12,20 @@
     <h1>Calculadora</h1>
     <br>
 
-    <form id="obtenerDatos" method="post">
+    <label>Número 1: </label>
+    <input type="number" id="valor1" autofocus placeholder="Escribe un número"><br><br>
 
-        <label>Número 1: </label>
-        <input type="number" id="valor1" autofocus placeholder="Escribe un número"><br><br>
+    <label>Número 2: </label>
+    <input type="number" id="valor2" placeholder="Escribe un número"><br><br>
 
-        <label>Número 2: </label>
-        <input type="number" id="valor2" placeholder="Escribe un número"><br><br>
+    <button type="button" onclick="suma()">SUMAR (+)</button>
+    <button type="button" onclick="resta()"> RESTAR (-)</button>
+    <button type="button" onclick="multiplicar()"> MULTIPLICAR (*)</button>
+    <button type="button" onclick="dividir()"> DIVIDIR (/)</button>
 
-        <button onclick="limpiar()">Limpiar celdas</button><br><br>
+    <p>El resultado es: <span id="resultado"></span></p>
 
-        <button type="button" onclick="suma()">SUMAR (+)</button>
-        <button type="button" onclick="resta()"> RESTAR (-)</button>
-        <button type="button" onclick="multiplicar()"> MULTIPLICAR (*)</button>
-        <button type="button" onclick="dividir()"> DIVIDIR (/)</button>
-
-        <p>El resultado es: <span id="resultado"></span></p>
-
-    </form>
-
-    <script src="operaciones.js"></script>
+    <script src="/operaciones.js"></script>
 
 </body>
 
